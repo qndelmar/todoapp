@@ -11,7 +11,7 @@ interface NavBarProps{
 const Navbar:FC<NavBarProps> = ({theme, openTasks, closedTasks, activeCategory, setActiveCategory}) => {
     return (
         <nav className="w-full mx-auto flex justify-end">
-            <ul className="dark:text-white text-black flex justify-evenly justify-self-end w-96 [&>*]:relative">
+            <ul className="dark:text-white text-black flex justify-evenly justify-self-end w-96 [&>*]:relative [&>*]:hover:cursor-pointer">
                 <li onClick={() => setActiveCategory(0)}
                     className={activeCategory === 0 ? cl.active : ''}>
                     All tasks

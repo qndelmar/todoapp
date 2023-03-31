@@ -1,6 +1,7 @@
 import {FC, useState} from "react";
 import {Merriweather_Sans} from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
+import AddTask from "@/components/ToDoComponents/AddTask";
 
 const merriw = Merriweather_Sans({subsets: ['latin'], weight: '400'})
 const ToDoWrapper:FC = () => {
@@ -8,6 +9,7 @@ const ToDoWrapper:FC = () => {
     return (
         <div className="">
             <p className={`${merriw.className} text-2xl text-black dark:text-white transition-all duration-200 text-right`}>Add, sort, complete and manage<span className="yourTasksLight"> your tasks</span></p>
+            <AddTask/>
             <Navbar theme={'dark'} openTasks={2} closedTasks={2} activeCategory={activeCategory} setActiveCategory={setActiveCategory}/>
         </div>
     );

@@ -9,7 +9,6 @@ export default function useTheme():any{
     const dispatch = useAppDispatch();
     const colorTheme = theme === 'dark' ? 'light' : 'dark';
     const setTheme = () => {
-
         dispatch(swapTheme(theme === 'dark' ? 'light' : 'dark'));
     }
     useEffect(() => {

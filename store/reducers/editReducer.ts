@@ -1,13 +1,19 @@
 import {Action, AnyAction, Reducer} from "redux";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {ITodo, ITodos} from "@/interfaces/ITodo";
 
-interface IState{
-    name: string,
-    isClosed: boolean
-    importance: number,
 
+const initialState:ITodos = {
+    todos: []
 }
-
-const initialState:IState[] = [];
-export const editReducer = (state = initialState, action:AnyAction) => {
-
-}
+export const editSlice = createSlice({
+    name: 'edit',
+    initialState,
+    reducers: {
+        addTask(state, action:PayloadAction<ITodo>){
+            state.todos.push(action.payload);
+        }
+    }
+})
+export default editSlice.reducer;
+export const {addTask} = editSlice.actions;

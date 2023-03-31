@@ -4,3 +4,6 @@ export interface ITodo {
     color: string,
     isClosed: boolean
 }
+export interface ITodos {
+    todos: ITodo[]
+}
