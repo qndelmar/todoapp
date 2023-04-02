@@ -3,7 +3,9 @@ export interface ITodo {
     importance: number,
     color: string,
     isClosed: boolean
+    id: number
 }
 export interface ITodos {
-    todos: ITodo[]
+    todos: ITodo[],
+    sortedTodos: ITodo[]
 }

@@ -1,5 +1,6 @@
-import React, {FC} from 'react';
+import React, {FC, useMemo} from 'react';
 import cl from './Navbar.module.css';
+import {act} from "react-dom/test-utils";
 
 interface NavBarProps{
     theme: string,
@@ -9,8 +10,16 @@ interface NavBarProps{
     setActiveCategory: any
 }
 const Navbar:FC<NavBarProps> = ({theme, openTasks, closedTasks, activeCategory, setActiveCategory}) => {
+
+    useMemo(() => {
+        if(activeCategory === 0){
+
+        }
+    }, [activeCategory])
+
+
     return (
-        <nav className="w-full mx-auto flex justify-end">
+        <nav className="w-full mx-auto flex justify-end select-none">
             <ul className="dark:text-white text-black flex justify-evenly justify-self-end w-96 [&>*]:relative [&>*]:hover:cursor-pointer">
                 <li onClick={() => setActiveCategory(0)}
                     className={activeCategory === 0 ? cl.active : ''}>

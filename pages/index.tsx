@@ -8,7 +8,7 @@ import {swapSlice} from "@/store/reducers/switchThemeReducer";
 import ThemeSwitch from "@/components/ThemeSwitch/ThemeSwitch";
 import {Merriweather_Sans} from "next/font/google";
 import PomodoroTimer from "@/components/PomodoroTimer/PomodoroTimer";
-import ToDoWrapper from "@/components/ToDoComponents/ToDoWrapper";
+import ToDoWrapper from "@/components/ToDoComponents/ToDoWrapper/ToDoWrapper";
 
 const merriw = Merriweather_Sans({subsets: ['latin'], weight: '400'})
 

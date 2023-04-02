@@ -34,7 +34,7 @@ const PomodoroTimer:FC = () => {
     }
 
     return (
-        <div>
+        <div className="select-none">
             <WorkTimer timeLeft={timeLeft}
                        setTimeLeft={setTimeLeft}
                        timerTime={timerTime}

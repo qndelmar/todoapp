@@ -2,6 +2,7 @@ import {ChangeEvent, FC, FormEvent, useMemo, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/store/hooks/redux";
 import editReducer, {editSlice} from "@/store/reducers/editReducer";
 import {ITodo} from "@/interfaces/ITodo";
+import ToDoPosition from "@/components/ToDoComponents/ToDoPosition";
 
 const AddTask:FC = () => {
     const [taskText, setTaskText] = useState('');
@@ -20,7 +21,8 @@ const AddTask:FC = () => {
             name: taskText,
             importance: 0,
             color: 'blue',
-            isClosed: false
+            isClosed: false,
+            id: Date.now()
         }
         dispatch(addTask(task))
     }

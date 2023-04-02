@@ -29,3 +29,21 @@ html{
     background: linear-gradient(90deg, rgba(0,5,255,1) 0%, rgba(255,0,0,1) 100%);
     background-clip: text;
 }
+.item-enter {
+    opacity: 0;
+    transform: scale(0%);
+}
+.item-enter-active {
+    opacity: 1;
+    transform: scale(100%);
+    transition: all 500ms ease-in;
+}
+.item-exit {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.item-exit-active {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 500ms ease-in;
+}
