@@ -20,7 +20,7 @@ export default function Home() {
     <div>
         <Head>
             <title>Manage your time!</title>
-            <meta name="description" content="This app can help you to manage your time and tasks!" />
+            <meta name="description" content="This app will help you manage your time and tasks!" />
         </Head>
         <ThemeSwitch/>
         <div className="2xl:w-[1500px] xl:w-[1250px] lg:w-[1000px] md:w-[750px] w-full sm:mt-48 mt-24 mx-auto">
