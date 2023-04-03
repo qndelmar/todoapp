@@ -6,7 +6,7 @@ const merriw = Merriweather_Sans({subsets: ['latin'], weight: '400'})
 const MusicComponent:FC = () => {
     return (
         <div className="mt-10">
-            <p className={`text-2xl ${merriw.className} dark:text-white text-black text-center`}>And finally listen soft playlist in our websites</p>
+            <p className={`text-2xl ${merriw.className} dark:text-white text-black text-center`}>And finally listen soft playlist on our website</p>
             <div className="grid lg:grid-cols-3 sm:grid-cols-1 mt-10 mx-20">
                 <iframe className="m-auto lg:mt-0 mt-2" width="250" height="155" src="https://www.youtube.com/embed/bP9gMpl1gyQ?controls=0"
                         title="YouTube video player" frameBorder="0"
