@@ -10,7 +10,7 @@ config.autoAddCss = false
 const store = setupStore();
 
 export default function App({ Component, pageProps }: AppProps) {
-
+    console.log = function(){}
   return (
       <Provider store={store}>
         <Component {...pageProps} />

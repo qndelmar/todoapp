@@ -10,12 +10,18 @@ import {Merriweather_Sans} from "next/font/google";
 import PomodoroTimer from "@/components/PomodoroTimer/PomodoroTimer";
 import ToDoWrapper from "@/components/ToDoComponents/ToDoWrapper/ToDoWrapper";
 import MusicComponent from "@/components/MusicsComponent/MusicComponent";
+import {useEffect} from "react";
 
 const merriw = Merriweather_Sans({subsets: ['latin'], weight: '400'})
 
 export default function Home() {
+
   return (
     <div>
+        <Head>
+            <title>Manage your time!</title>
+            <meta name="description" content="This app can help you to manage your time and tasks!" />
+        </Head>
         <ThemeSwitch/>
         <div className="2xl:w-[1500px] xl:w-[1250px] lg:w-[1000px] md:w-[750px] w-full sm:mt-48 mt-24 mx-auto">
             <p className={`${merriw.className} dark:text-white transition-all duration-100 text-center md:text-left text-black lg:text-4xl text-3xl leading-10`}>Use <span className={`useApp`}>our app</span><br/>to plan and track your activities</p>

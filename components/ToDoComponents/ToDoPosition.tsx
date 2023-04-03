@@ -54,7 +54,7 @@ const ToDoPosition:FC<ITodo> = ({name, color, isClosed, importance, id}) => {
     }
 
     return (
-        <div className="sm:w-[30rem] w-[95%] ml-1 pr-1 sm:ml-0 sm:pr-0 h-24 mt-4 relative dark:bg-[#040433FF] bg-blue-400 text-white grid sm:grid-cols-6 grid-cols-4 items-center rounded-t-xl">
+        <div className="sm:w-[30rem] w-[95%] ml-1 pr-1 sm:ml-0 sm:pr-0 h-24 mt-4 relative dark:bg-[#040433FF] bg-blue-500 text-white grid sm:grid-cols-6 grid-cols-4 items-center rounded-t-xl">
             <div className="flex h-full"><p onClick={completeToDo} className={`text-3xl ml-1 sm:ml-8 self-center ${taskColor}`}>{isClosed ? <FontAwesomeIcon className="text-green-600" icon={faCheck}/> : '•'}</p></div>
                 <div className={`flex h-full transition-all duration-1000 items-center col-start-2 col-span-2 ${isClosed ? 'text-gray-500' : ''}`}>
                     <p className="overflow-hidden text-[0.9rem] break-words">{name}</p>

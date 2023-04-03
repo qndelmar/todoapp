@@ -55,8 +55,8 @@ const WorkTimer:FC<WorkTimer> = ({timeLeft, setTimeLeft, timerTime, setTimerType
                 {seconds}
             </div>
             <div className="text-gray-500 dark:text-white opacity-70 text-4xl w-[30%] flex justify-evenly pt-1">
-                <button onClick={startAndStopTimer}>{timerRunning ? <FontAwesomeIcon icon={faPause}/> : <FontAwesomeIcon icon={faPlay}/>}</button>
-                <button onClick={resetTimer}><FontAwesomeIcon icon={faArrowsRotate} /></button>
+                <button onClick={startAndStopTimer} aria-label="Play/Stop">{timerRunning ? <FontAwesomeIcon icon={faPause}/> : <FontAwesomeIcon icon={faPlay}/>}</button>
+                <button onClick={resetTimer} aria-label="Reset"><FontAwesomeIcon icon={faArrowsRotate} /></button>
             </div>
         </div>
         </div>
