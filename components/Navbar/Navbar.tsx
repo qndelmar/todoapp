@@ -19,7 +19,7 @@ const Navbar:FC<NavBarProps> = ({theme, openTasks, closedTasks, activeCategory, 
 
 
     return (
-        <nav className="w-full mx-auto flex justify-end select-none">
+        <nav className="w-full mx-auto flex md:justify-end justify-center select-none">
             <ul className="dark:text-white text-black flex justify-evenly justify-self-end w-96 [&>*]:relative [&>*]:hover:cursor-pointer">
                 <li onClick={() => setActiveCategory(0)}
                     className={activeCategory === 0 ? cl.active : ''}>

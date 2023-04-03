@@ -47,8 +47,8 @@ const WorkTimer:FC<WorkTimer> = ({timeLeft, setTimeLeft, timerTime, setTimerType
     const seconds = timeLeft % 60;
 
     return (
-        <div>
-        <div className="flex justify-between items-center rounded-xl h-20 w-96 ml-10 border-t-4 mt-10">
+        <div className="">
+        <div className="flex justify-between items-center rounded-xl h-20 sm:w-96 w-full md:ml-10 border-t-4 mt-10">
             <div className="text-7xl font-bold text-gray-500 dark:text-white opacity-70">
                 {minutes < 10 ? "0" : ""}
                 {minutes}:{seconds < 10 ? "0" : ""}

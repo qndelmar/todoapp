@@ -55,6 +55,13 @@ export const editSlice = createSlice({
                 state.todos[index].importance = action.payload.importance;
             }
         localStorage.setItem('todos', JSON.stringify(state.todos));
+        },
+        clearTasks(state, action:PayloadAction<null>){
+            state.todos = state.todos.filter((el) => {
+                if(el.isClosed !== true){
+                    return el;
+                }
+            });
         }
     }
 })

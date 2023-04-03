@@ -19,7 +19,7 @@ const ThemeSwitch:FC = () => {
 
 
     return (
-        <div className={`${kanit.className} top-2 fixed left-2`}>
+        <div className={`${kanit.className} top-2 absolute left-2`}>
             <div className="flex items-center w-fit bg-transparent">
                 <p ref={firstPRef} className="text-black dark:text-[wheat] pr-2 text-[0.7em] transition-all duration-100">NIGHT</p>
             <div ref={ref}  className={`w-[55px] h-[25px] dark:bg-white bg-black rounded-3xl relative bg-amber-100 flex items-center transition-all duration-100`} onClick={setTheme}>

@@ -34,7 +34,7 @@ const PomodoroTimer:FC = () => {
     }
 
     return (
-        <div className="select-none">
+        <div className="select-none flex flex-col items-center md:block">
             <WorkTimer timeLeft={timeLeft}
                        setTimeLeft={setTimeLeft}
                        timerTime={timerTime}
@@ -42,7 +42,7 @@ const PomodoroTimer:FC = () => {
                        setTimerType={setTimerType}
                        timerRunning={timerRunning}
                        setTimerRunning={setTimerRunning}/>
-            <div onClick={changeType} className={`${prompt.className} flex justify-evenly w-40 items-center text-black dark:text-white ${timerRunning ? 'opacity-0' : 'opacity-90'} hover:cursor-pointer ml-36 mt-6
+            <div onClick={changeType} className={`${prompt.className} flex justify-evenly w-40 items-center text-black dark:text-white ${timerRunning ? 'opacity-0' : 'opacity-90'} hover:cursor-pointer md:ml-36 ml-0 mt-6
             transition-all duration-500`}>
                 <span className="rotate-90 text-[13px]">
                     <FontAwesomeIcon icon={faAngleLeft}/>
