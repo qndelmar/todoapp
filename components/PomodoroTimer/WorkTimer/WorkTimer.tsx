@@ -48,13 +48,13 @@ const WorkTimer:FC<WorkTimer> = ({timeLeft, setTimeLeft, timerTime, setTimerType
 
     return (
         <div className="">
-        <div className="flex justify-between items-center rounded-xl h-20 sm:w-96 w-full md:ml-10 border-t-4 mt-10">
+        <div className="flex justify-between items-center rounded-xl h-20 sm:w-96 w-[120%] -ml-5 sm:ml-0 md:ml-10 border-t-4 mt-10">
             <div className="text-7xl font-bold text-gray-500 dark:text-white opacity-70">
                 {minutes < 10 ? "0" : ""}
                 {minutes}:{seconds < 10 ? "0" : ""}
                 {seconds}
             </div>
-            <div className="text-gray-500 dark:text-white opacity-70 text-4xl w-[30%] flex justify-evenly pt-1">
+            <div className="text-gray-500 dark:text-white opacity-70 text-4xl w-full sm:w-[30%] flex justify-evenly pt-1">
                 <button onClick={startAndStopTimer} aria-label="Play/Stop">{timerRunning ? <FontAwesomeIcon icon={faPause}/> : <FontAwesomeIcon icon={faPlay}/>}</button>
                 <button onClick={resetTimer} aria-label="Reset"><FontAwesomeIcon icon={faArrowsRotate} /></button>
             </div>
